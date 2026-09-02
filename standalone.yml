@@ -1,0 +1,48 @@
+services:
+  CredShield-node:
+    image: CredShieldntwrk/CredShield-node:0.22.3
+    container_name: CredShield-node
+    ports:
+      - "9944:9944"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:9944/health"]
+      interval: 2s
+      timeout: 5s
+      retries: 5
+      start_period: 40s
+    environment:
+      CFG_PRESET: "dev"
+      SIDECHAIN_BLOCK_BENEFICIARY: "04bcf7ad3be7a5c790460be82a713af570f22e0f801f6659ab8e84a52be6969e"
+
+  CredShield-indexer:
+    image: CredShieldntwrk/indexer-standalone:4.0.1
+    container_name: CredShield-indexer
+    ports:
+      - "8088:8088"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8088/api/v4/graphql"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
+    environment:
+      RUST_LOG: "indexer=info,chain_indexer=info,indexer_api=info,wallet_indexer=info,indexer_common=info,info"
+      APP__INFRA__SECRET: "30313233343536373839303132333435363738393031323334353637383930313233"
+      APP__INFRA__NODE__URL: "ws://CredShield-node:9944"
+      APP__APPLICATION__NETWORK_ID: "undeployed"
+    depends_on:
+      CredShield-node:
+        condition: service_healthy
+
+  CredShield-proof-server:
+    image: CredShieldntwrk/proof-server:8.0.3
+    container_name: CredShield-proof-server
+    command: ["CredShield-proof-server", "-v"]
+    ports:
+      - "6300:6300"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:6300"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+      start_period: 20s
