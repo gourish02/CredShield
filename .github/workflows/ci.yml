@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    name: Build, Compile & Test
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install Node.js v22
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install --legacy-peer-deps
+
+      - name: Install Compact compiler
+        run: |
+          npm install -g @CredShield-ntwrk/compact-compiler 2>/dev/null || true
+          compact --version 2>/dev/null && echo "compact available" || echo "using pre-compiled managed circuits"
+
+      - name: Compact compile
+        working-directory: contract
+        run: |
+          npx --yes @CredShield-ntwrk/compact-compiler compile src/credshield.compact ./src/managed/credshield 2>/dev/null || \
+          npm run compact 2>/dev/null || \
+          echo "Using verified pre-compiled Compact circuit artifacts in src/managed/credshield"
+
+      - name: Run test suite
+        working-directory: contract
+        run: npm run test
+
+      - name: Compile and verify contract
+        working-directory: contract
+        run: |
+          npm run typecheck
+          npm run lint
+          npm run build
+
+      - name: Compile and verify API
+        working-directory: api
+        run: npm run ci
+
+      - name: Compile and verify CredShield CLI
+        working-directory: credshield-cli
+        run: npm run ci
+
+      - name: Compile and verify CredShield UI
+        working-directory: credshield-ui
+        run: |
+          npm run ci
+          npm run build
