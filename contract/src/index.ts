@@ -1,4 +1,4 @@
-import { CompiledContract } from "@CredShield-ntwrk/CredShield-js-protocol/compact-js";
+import { CompiledContract } from "@midnight-ntwrk/midnight-js-protocol/compact-js";
 
 export * from "./managed/credshield/contract/index.js";
 export * from "./witnesses.js";
