@@ -25,12 +25,6 @@ const WalletContext = createContext<WalletContextValue | undefined>(undefined);
 const NETWORK_ID = (import.meta.env.VITE_NETWORK_ID as string | undefined) ?? 'undeployed';
 setNetworkId(NETWORK_ID);
 
-declare global {
-  interface Window {
-    midnight?: Record<string, unknown>;
-  }
-}
-
 const detectWallet = (): InitialAPI | undefined => {
   if (typeof window === 'undefined' || !window.midnight) return undefined;
   const midObj = window.midnight as Record<string, unknown>;
