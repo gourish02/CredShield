@@ -30,13 +30,22 @@ console.log('ZK Config Path:', ZK_CONFIG_PATH);
 console.log('Proof Server:', PROOF_SERVER);
 console.log('Indexer:', INDEXER);
 
-// Use the CredShield wallet CLI's serve connector
-// The wallet serve should be running: CredShield serve --network preprod --approve-all
-import { createWalletClient } from 'CredShield-wallet-connector';
-
-console.log('Connecting to wallet connector at ws://localhost:9932...');
-const wallet = await createWalletClient({ url: 'ws://localhost:9932', networkId: 'Preprod' });
-console.log('Wallet connected!');
-
-const balances = await wallet.getUnshieldedBalances();
-console.log('Wallet balances:', balances);
+// Note: For interactive deployment and operations on Preprod, prefer using the CredShield CLI:
+//   npm --prefix credshield-cli run preprod-remote
+//
+// If using the Midnight wallet CLI serve connector:
+//   midnight-wallet serve --network preprod --approve-all
+try {
+  const { createWalletClient } = await import('@midnight-ntwrk/wallet-connector').catch(() => {
+    return import('midnight-wallet-connector');
+  });
+  console.log('Connecting to wallet connector at ws://localhost:9932...');
+  const wallet = await createWalletClient({ url: 'ws://localhost:9932', networkId: 'Preprod' });
+  console.log('Wallet connected!');
+  const balances = await wallet.getUnshieldedBalances();
+  console.log('Wallet balances:', balances);
+} catch (err) {
+  console.log('Note: Wallet connector not running or not installed.');
+  console.log('To run CLI deployment against Preprod, run:');
+  console.log('  npm --prefix credshield-cli run preprod-remote');
+}

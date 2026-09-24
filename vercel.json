@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "cd credshield-ui && yarn build",
+  "buildCommand": "npm --prefix credshield-ui run build",
   "outputDirectory": "credshield-ui/dist",
-  "installCommand": "yarn install",
+  "installCommand": "npm install --legacy-peer-deps",
   "framework": "vite",
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }

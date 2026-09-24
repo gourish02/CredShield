@@ -18,7 +18,7 @@
     "start": "http-server --port 0 ./dist",
     "typecheck": "tsc -p tsconfig.json --noEmit",
     "preview": "vite preview",
-    "prepack": "yarn build"
+    "prepack": "npm run build"
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",

@@ -60,7 +60,7 @@ const technicalSpecs = [
     detail: 'credentialState, credentialId, issuerAuthority, metadata, counters, sequence',
   },
   { icon: Lock, label: 'Key Size', value: '32 bytes', detail: 'Bytes<32> secret key in local witness context' },
-  { icon: Zap, label: 'Proof Server', value: 'v8.0.3', detail: 'CredShieldntwrk/proof-server Docker image' },
+  { icon: Zap, label: 'Proof Server', value: 'v8.0.3', detail: 'midnightntwrk/proof-server Docker image' },
   { icon: Settings, label: 'Compact', value: 'v0.23', detail: 'Latest Compact language specification' },
   { icon: Wrench, label: 'Network Mode', value: 'Undeployed', detail: 'Local dev node with genesis wallet pre-funded' },
 ];

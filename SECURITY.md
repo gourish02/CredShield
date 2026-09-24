@@ -12,7 +12,7 @@ for Linux Foundation projects.
 ## Disclosing a security issue
 
 The CredShield foundation takes all security issues seriously, which includes all source code repositories managed
-through our [GitHub organization](https://github.com/CredShieldntwrk). If you believe you have found a security vulnerability in any CredShield Foundation
+through our [GitHub repository](https://github.com/gourish02/CredShield). If you believe you have found a security vulnerability in any CredShield
 owned repository, _please report it using GitHub's private vulnerability reporting_ and not through public GitHub issues. To learn more about GitHub's
 private vulnerability reporting and how to submit a vulnerability report, please review [GitHub's documentation on private reporting](https://docs.github.com/code-security/security-advisories/guidance-on-reporting-and-writing-information-about-vulnerabilities/privately-reporting-a-security-vulnerability).
 
@@ -34,7 +34,7 @@ indicating the next steps in handling your report.
 
 If you've been unable to successfully draft a vulnerability report via GitHub
 or have not received a response during the alloted response window, please
-reach out via the [CredShield foundation security contact email](mailto:security@CredShield.foundation).
+reach out via [email](mailto:gourishcsawant@gmail.com).
 
 After the initial reply to your report, the maintainers will endeavor to keep
 you informed of the progress towards a fix and full announcement, and may ask

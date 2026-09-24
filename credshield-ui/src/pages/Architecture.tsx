@@ -73,21 +73,21 @@ const pipeline = [
 
 const services = [
   {
-    name: 'CredShield Node',
+    name: 'Midnight Node',
     port: '9944',
-    image: 'CredShieldntwrk/CredShield-node:0.22.3',
+    image: 'midnightntwrk/midnight-node:0.22.3',
     desc: 'Local blockchain node with dev preset',
   },
   {
     name: 'Indexer',
     port: '8088',
-    image: 'CredShieldntwrk/indexer-standalone:4.0.1',
+    image: 'midnightntwrk/indexer-standalone:4.0.1',
     desc: 'GraphQL + WebSocket indexer API',
   },
   {
     name: 'Proof Server',
     port: '6300',
-    image: 'CredShieldntwrk/proof-server:8.0.3',
+    image: 'midnightntwrk/proof-server:8.0.3',
     desc: 'ZK proof generation service',
   },
 ];

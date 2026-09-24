@@ -9,6 +9,14 @@
   "engines": {
     "node": ">=22"
   },
+  "scripts": {
+    "build": "npm --prefix contract run build && npm --prefix api run build && npm --prefix credshield-cli run build && npm --prefix credshield-ui run build",
+    "test": "npm --prefix contract run test",
+    "typecheck": "npm --prefix contract run typecheck && npm --prefix api run typecheck && npm --prefix credshield-cli run typecheck && npm --prefix credshield-ui run typecheck",
+    "lint": "npm --prefix contract run lint && npm --prefix api run lint && npm --prefix credshield-cli run lint && npm --prefix credshield-ui run lint",
+    "dev": "npm --prefix credshield-ui run dev",
+    "ci": "npm run typecheck && npm run lint && npm run test && npm run build"
+  },
   "workspaces": [
     "credshield-cli",
     "credshield-ui",
