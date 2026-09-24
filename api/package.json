@@ -1,8 +1,8 @@
 {
-  "name": "@CredShield-ntwrk/credshield-api",
+  "name": "@midnight-ntwrk/credshield-api",
   "version": "0.1.0",
   "description": "CredShield Privacy-Preserving Verifiable Credentials API Layer",
-  "author": "IOG",
+  "author": "gourish02",
   "license": "MIT",
   "private": true,
   "type": "module",
