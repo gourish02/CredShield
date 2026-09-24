@@ -1,7 +1,7 @@
 {
-  "name": "@CredShield-ntwrk/credshield-monorepo",
+  "name": "@midnight-ntwrk/credshield-monorepo",
   "version": "0.1.0",
-  "description": "CredShield Privacy-Preserving Verifiable Credentials Platform on CredShield Blockchain",
+  "description": "CredShield Privacy-Preserving Verifiable Credentials Platform on Midnight Blockchain",
   "author": "gourish02",
   "license": "MIT",
   "private": true,
