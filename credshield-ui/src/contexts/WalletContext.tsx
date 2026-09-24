@@ -25,9 +25,15 @@ const WalletContext = createContext<WalletContextValue | undefined>(undefined);
 const NETWORK_ID = (import.meta.env.VITE_NETWORK_ID as string | undefined) ?? 'undeployed';
 setNetworkId(NETWORK_ID);
 
+declare global {
+  interface Window {
+    midnight?: Record<string, unknown>;
+  }
+}
+
 const detectWallet = (): InitialAPI | undefined => {
-  if (typeof window === 'undefined' || !window.CredShield) return undefined;
-  const midObj = window.CredShield as Record<string, unknown>;
+  if (typeof window === 'undefined' || !window.midnight) return undefined;
+  const midObj = window.midnight as Record<string, unknown>;
 
   for (const [key, val] of Object.entries(midObj)) {
     if (
@@ -61,8 +67,8 @@ export const WalletProvider: React.FC<PropsWithChildren> = ({ children }) => {
   const connect = useCallback(async () => {
     setState((s) => ({ ...s, status: 'detecting', errorMessage: null }));
 
-    if (typeof window !== 'undefined' && window.CredShield) {
-      console.log('[CredShield] window.CredShield keys:', Object.keys(window.CredShield));
+    if (typeof window !== 'undefined' && window.midnight) {
+      console.log('[CredShield] window.midnight keys:', Object.keys(window.midnight));
     }
 
     let wallet: InitialAPI | undefined;

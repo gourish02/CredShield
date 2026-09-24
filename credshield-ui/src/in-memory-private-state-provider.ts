@@ -148,7 +148,7 @@ export const inMemoryPrivateStateProvider = <PSI extends PrivateStateId, PS = un
       void options;
       const address = requireContractAddress();
       return Promise.resolve({
-        format: 'CredShield-private-state-export',
+        format: 'midnight-private-state-export' as const,
         encryptedPayload: encode({
           contractAddress: address,
           states: exportPrivateStatePayload(address),
@@ -194,7 +194,7 @@ export const inMemoryPrivateStateProvider = <PSI extends PrivateStateId, PS = un
     exportSigningKeys(options?: ExportSigningKeysOptions): Promise<SigningKeyExport> {
       void options;
       return Promise.resolve({
-        format: 'CredShield-signing-key-export',
+        format: 'midnight-signing-key-export' as const,
         encryptedPayload: encode({
           keys: exportSigningKeyPayload(),
         }),
