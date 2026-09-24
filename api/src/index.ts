@@ -1,7 +1,7 @@
 import {
   type ContractAddress,
   convertFieldToBytes,
-} from "@CredShield-ntwrk/compact-runtime";
+} from "@midnight-ntwrk/compact-runtime";
 import type { Logger } from "pino";
 import {
   type CredShieldProviders,
@@ -10,19 +10,19 @@ import {
   type CredShieldContract,
   credShieldPrivateStateKey,
 } from "./common-types.js";
-import * as CredShield from "@CredShield-ntwrk/credshield-contract";
+import * as CredShield from "@midnight-ntwrk/credshield-contract";
 import {
   CompiledCredShieldContract,
   CredShieldPrivateState,
   createCredShieldPrivateState,
-} from "@CredShield-ntwrk/credshield-contract";
+} from "@midnight-ntwrk/credshield-contract";
 import * as utils from "./utils/index.js";
 import {
   deployContract,
   findDeployedContract,
-} from "@CredShield-ntwrk/CredShield-js-contracts";
+} from "@midnight-ntwrk/midnight-js-contracts";
 import { combineLatest, map, tap, from, type Observable } from "rxjs";
-import { toHex } from "@CredShield-ntwrk/CredShield-js-utils";
+import { toHex } from "@midnight-ntwrk/midnight-js-utils";
 
 export interface DeployedCredShieldAPI {
   readonly deployedContractAddress: ContractAddress;

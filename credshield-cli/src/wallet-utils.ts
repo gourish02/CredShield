@@ -13,16 +13,16 @@
  * limitations under the License.
  */
 
-import { UnshieldedTokenType } from '@CredShield-ntwrk/CredShield-js-protocol/ledger';
-import { type FacadeState, type WalletFacade } from '@CredShield-ntwrk/wallet-sdk-facade';
-import { type ShieldedWalletAPI, type ShieldedWalletState } from '@CredShield-ntwrk/wallet-sdk-shielded';
-import { type UnshieldedWalletAPI, type UnshieldedWalletState } from '@CredShield-ntwrk/wallet-sdk-unshielded-wallet';
+import { UnshieldedTokenType } from '@midnight-ntwrk/midnight-js-protocol/ledger';
+import { type FacadeState, type WalletFacade } from '@midnight-ntwrk/wallet-sdk-facade';
+import { type ShieldedWalletAPI, type ShieldedWalletState } from '@midnight-ntwrk/wallet-sdk-shielded';
+import { type UnshieldedWalletAPI, type UnshieldedWalletState } from '@midnight-ntwrk/wallet-sdk-unshielded-wallet';
 import * as Rx from 'rxjs';
 
-import { FaucetClient, type EnvironmentConfiguration } from '@CredShield-ntwrk/testkit-js';
+import { FaucetClient, type EnvironmentConfiguration } from '@midnight-ntwrk/testkit-js';
 import { Logger } from 'pino';
-import { UnshieldedAddress } from '@CredShield-ntwrk/wallet-sdk-address-format';
-import { getNetworkId } from '@CredShield-ntwrk/CredShield-js-network-id';
+import { UnshieldedAddress } from '@midnight-ntwrk/wallet-sdk-address-format';
+import { getNetworkId } from '@midnight-ntwrk/midnight-js-network-id';
 
 export const getInitialShieldedState = async (
   logger: Logger,

@@ -17,8 +17,8 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "@CredShield-ntwrk/credshield-api": ["../api/src/index.ts"],
-      "@CredShield-ntwrk/credshield-contract": ["../contract/src/index.ts"]
+      "@midnight-ntwrk/credshield-api": ["../api/src/index.ts"],
+      "@midnight-ntwrk/credshield-contract": ["../contract/src/index.ts"]
     }
   },
   "include": ["src"]

@@ -2,24 +2,24 @@ import { createInterface, type Interface } from 'node:readline/promises';
 import { stdin as input, stdout as output } from 'node:process';
 import { type Config, StandaloneConfig } from './config.js';
 import { type Logger } from 'pino';
-import { type ContractAddress } from '@CredShield-ntwrk/compact-runtime';
-import { type TestEnvironment } from '@CredShield-ntwrk/testkit-js';
+import { type ContractAddress } from '@midnight-ntwrk/compact-runtime';
+import { type TestEnvironment } from '@midnight-ntwrk/testkit-js';
 import {
   CredShieldAPI,
   type CredShieldDerivedState,
   type CredShieldProviders,
   credShieldPrivateStateKey,
-} from '@CredShield-ntwrk/credshield-api';
-import { NodeZkConfigProvider } from '@CredShield-ntwrk/CredShield-js-node-zk-config-provider';
-import { levelPrivateStateProvider } from '@CredShield-ntwrk/CredShield-js-level-private-state-provider';
-import { indexerPublicDataProvider } from '@CredShield-ntwrk/CredShield-js-indexer-public-data-provider';
-import { httpClientProofProvider } from '@CredShield-ntwrk/CredShield-js-http-client-proof-provider';
-import { type WalletFacade } from '@CredShield-ntwrk/wallet-sdk-facade';
-import { CredShieldWalletProvider } from './CredShield-wallet-provider.js';
-import { toHex } from '@CredShield-ntwrk/CredShield-js-utils';
-import { randomBytes } from '@CredShield-ntwrk/credshield-api';
-import { CredentialState, ledger, type CredShieldPrivateState } from '@CredShield-ntwrk/credshield-contract';
-import { unshieldedToken } from '@CredShield-ntwrk/CredShield-js-protocol/ledger';
+} from '@midnight-ntwrk/credshield-api';
+import { NodeZkConfigProvider } from '@midnight-ntwrk/midnight-js-node-zk-config-provider';
+import { levelPrivateStateProvider } from '@midnight-ntwrk/midnight-js-level-private-state-provider';
+import { indexerPublicDataProvider } from '@midnight-ntwrk/midnight-js-indexer-public-data-provider';
+import { httpClientProofProvider } from '@midnight-ntwrk/midnight-js-http-client-proof-provider';
+import { type WalletFacade } from '@midnight-ntwrk/wallet-sdk-facade';
+import { CredShieldWalletProvider } from './midnight-wallet-provider.js';
+import { toHex } from '@midnight-ntwrk/midnight-js-utils';
+import { randomBytes } from '@midnight-ntwrk/credshield-api';
+import { CredentialState, ledger, type CredShieldPrivateState } from '@midnight-ntwrk/credshield-contract';
+import { unshieldedToken } from '@midnight-ntwrk/midnight-js-protocol/ledger';
 import { syncWallet, waitForUnshieldedFunds } from './wallet-utils.js';
 import { generateDust } from './generate-dust.js';
 

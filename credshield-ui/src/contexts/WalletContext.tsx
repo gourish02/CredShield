@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useCallback, useRef, type PropsWithChildren } from 'react';
-import { type InitialAPI, type ConnectedAPI } from '@CredShield-ntwrk/dapp-connector-api';
-import { setNetworkId } from '@CredShield-ntwrk/CredShield-js-network-id';
+import { type InitialAPI, type ConnectedAPI } from '@midnight-ntwrk/dapp-connector-api';
+import { setNetworkId } from '@midnight-ntwrk/midnight-js-network-id';
 
 export type WalletStatus = 'idle' | 'detecting' | 'connecting' | 'connected' | 'error';
 

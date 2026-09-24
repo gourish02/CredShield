@@ -1,11 +1,11 @@
 // Quick deploy script for CredShield contract on Preprod
 // Uses the CredShield wallet CLI's funded wallet (already has DUST)
 
-import { setNetworkId } from '@CredShield-ntwrk/CredShield-js-network-id';
-import { deployContract } from '@CredShield-ntwrk/CredShield-js-contracts';
-import { httpClientProofProvider } from '@CredShield-ntwrk/CredShield-js-http-client-proof-provider';
-import { indexerPublicDataProvider } from '@CredShield-ntwrk/CredShield-js-indexer-public-data-provider';
-import { nodeZkConfigProvider } from '@CredShield-ntwrk/CredShield-js-node-zk-config-provider';
+import { setNetworkId } from '@midnight-ntwrk/midnight-js-network-id';
+import { deployContract } from '@midnight-ntwrk/midnight-js-contracts';
+import { httpClientProofProvider } from '@midnight-ntwrk/midnight-js-http-client-proof-provider';
+import { indexerPublicDataProvider } from '@midnight-ntwrk/midnight-js-indexer-public-data-provider';
+import { nodeZkConfigProvider } from '@midnight-ntwrk/midnight-js-node-zk-config-provider';
 import { randomBytes } from 'crypto';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -15,8 +15,8 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 setNetworkId('preprod');
 
 const PROOF_SERVER = 'http://localhost:6300';
-const INDEXER = 'https://indexer.preprod.CredShield.network/api/v4/graphql';
-const INDEXER_WS = 'wss://indexer.preprod.CredShield.network/api/v4/graphql/ws';
+const INDEXER = 'https://indexer.preprod.midnight.network/api/v4/graphql';
+const INDEXER_WS = 'wss://indexer.preprod.midnight.network/api/v4/graphql/ws';
 const ZK_CONFIG_PATH = path.resolve(__dirname, 'contract/src/managed/credshield');
 
 console.log('Loading contract...');

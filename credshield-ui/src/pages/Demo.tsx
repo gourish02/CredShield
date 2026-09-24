@@ -67,7 +67,7 @@ export default function Demo() {
           </p>
           <pre className="bg-[#2B2644] rounded-xl p-4 text-[#AFDDFF] font-mono text-[12px] overflow-x-auto">{`cd contract
 yarn compact # Compiles Compact contract into ZK proving keys & TypeScript bindings
-yarn build   # Builds @CredShield-ntwrk/credshield-contract`}</pre>
+yarn build   # Builds @midnight-ntwrk/credshield-contract`}</pre>
         </>
       ),
     },

@@ -19,8 +19,8 @@ import {
   getTestEnvironment,
   RemoteTestEnvironment,
   TestEnvironment,
-} from '@CredShield-ntwrk/testkit-js';
-import { setNetworkId } from '@CredShield-ntwrk/CredShield-js-network-id';
+} from '@midnight-ntwrk/testkit-js';
+import { setNetworkId } from '@midnight-ntwrk/midnight-js-network-id';
 import { Logger } from 'pino';
 
 export interface Config {

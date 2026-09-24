@@ -19,8 +19,8 @@
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@CredShield-ntwrk/credshield-api": ["../api/dist/index.d.ts"],
-      "@CredShield-ntwrk/credshield-contract": ["../contract/dist/index.d.ts"]
+      "@midnight-ntwrk/credshield-api": ["../api/dist/index.d.ts"],
+      "@midnight-ntwrk/credshield-contract": ["../contract/dist/index.d.ts"]
     }
   }
 }

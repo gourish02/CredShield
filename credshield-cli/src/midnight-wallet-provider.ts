@@ -20,14 +20,14 @@ import {
   type FinalizedTransaction,
   LedgerParameters,
   ZswapSecretKeys,
-} from '@CredShield-ntwrk/CredShield-js-protocol/ledger';
-import { type CredShieldProvider, type UnboundTransaction, type WalletProvider } from '@CredShield-ntwrk/CredShield-js-types';
-import { ttlOneHour } from '@CredShield-ntwrk/CredShield-js-utils';
-import { type WalletFacade } from '@CredShield-ntwrk/wallet-sdk-facade';
+} from '@midnight-ntwrk/midnight-js-protocol/ledger';
+import { type MidnightProvider, type UnboundTransaction, type WalletProvider } from '@midnight-ntwrk/midnight-js-types';
+import { ttlOneHour } from '@midnight-ntwrk/midnight-js-utils';
+import { type WalletFacade } from '@midnight-ntwrk/wallet-sdk-facade';
 import type { Logger } from 'pino';
 
 import { getInitialShieldedState } from './wallet-utils.js';
-import { type DustWalletOptions, type EnvironmentConfiguration, FluentWalletBuilder } from '@CredShield-ntwrk/testkit-js';
+import { type DustWalletOptions, type EnvironmentConfiguration, FluentWalletBuilder } from '@midnight-ntwrk/testkit-js';
 
 type UnshieldedKeystore = {
   getPublicKey(): unknown;
@@ -38,7 +38,7 @@ type UnshieldedKeystore = {
  * Provider class that implements wallet functionality for the CredShield network.
  * Handles transaction balancing, submission, and wallet state management.
  */
-export class CredShieldWalletProvider implements CredShieldProvider, WalletProvider {
+export class CredShieldWalletProvider implements MidnightProvider, WalletProvider {
   logger: Logger;
   readonly env: EnvironmentConfiguration;
   readonly wallet: WalletFacade;

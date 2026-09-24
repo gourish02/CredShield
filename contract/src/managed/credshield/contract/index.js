@@ -1,4 +1,4 @@
-import * as __compactRuntime from "@CredShield-ntwrk/compact-runtime";
+import * as __compactRuntime from "@midnight-ntwrk/compact-runtime";
 __compactRuntime.checkRuntimeVersion("0.16.0");
 
 export var CredentialState;

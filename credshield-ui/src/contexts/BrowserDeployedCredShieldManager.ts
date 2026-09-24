@@ -1,11 +1,11 @@
-import { type ConnectedAPI } from '@CredShield-ntwrk/dapp-connector-api';
-import { type ContractAddress } from '@CredShield-ntwrk/compact-runtime';
-import { type UnboundTransaction } from '@CredShield-ntwrk/CredShield-js-types';
-import { type CredShieldCircuitKeys, type CredShieldProviders, CredShieldAPI } from '@CredShield-ntwrk/credshield-api';
-import { type CredShieldPrivateState } from '@CredShield-ntwrk/credshield-contract';
-import { FetchZkConfigProvider } from '@CredShield-ntwrk/CredShield-js-fetch-zk-config-provider';
-import { httpClientProofProvider } from '@CredShield-ntwrk/CredShield-js-http-client-proof-provider';
-import { indexerPublicDataProvider } from '@CredShield-ntwrk/CredShield-js-indexer-public-data-provider';
+import { type ConnectedAPI } from '@midnight-ntwrk/dapp-connector-api';
+import { type ContractAddress } from '@midnight-ntwrk/compact-runtime';
+import { type UnboundTransaction } from '@midnight-ntwrk/midnight-js-types';
+import { type CredShieldCircuitKeys, type CredShieldProviders, CredShieldAPI } from '@midnight-ntwrk/credshield-api';
+import { type CredShieldPrivateState } from '@midnight-ntwrk/credshield-contract';
+import { FetchZkConfigProvider } from '@midnight-ntwrk/midnight-js-fetch-zk-config-provider';
+import { httpClientProofProvider } from '@midnight-ntwrk/midnight-js-http-client-proof-provider';
+import { indexerPublicDataProvider } from '@midnight-ntwrk/midnight-js-indexer-public-data-provider';
 import { BehaviorSubject, type Observable } from 'rxjs';
 import { type Logger } from 'pino';
 import { inMemoryPrivateStateProvider } from '../in-memory-private-state-provider';
@@ -16,8 +16,8 @@ import {
   type SignatureEnabled,
   type TransactionId,
   Transaction,
-} from '@CredShield-ntwrk/CredShield-js-protocol/ledger';
-import { fromHex, toHex } from '@CredShield-ntwrk/CredShield-js-utils';
+} from '@midnight-ntwrk/midnight-js-protocol/ledger';
+import { fromHex, toHex } from '@midnight-ntwrk/midnight-js-utils';
 import { formatContractAddress } from '../globals';
 
 export type CredShieldDeployment =
@@ -171,7 +171,7 @@ export class BrowserDeployedCredShieldManager implements DeployedCredShieldAPIPr
   }
 }
 
-import { setNetworkId, type NetworkId } from '@CredShield-ntwrk/CredShield-js-network-id';
+import { setNetworkId, type NetworkId } from '@midnight-ntwrk/midnight-js-network-id';
 
 const initializeProviders = async (logger: Logger, connectedAPI: ConnectedAPI): Promise<CredShieldProviders> => {
   const zkConfigPath = window.location.origin;

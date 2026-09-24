@@ -317,7 +317,7 @@ CredShield_creadshild/
 |---|---|---|
 | Node.js | ≥ 22 | `nvm install 22` |
 | Docker + Compose v2 | Latest | [docker.com](https://docker.com) |
-| Compact compiler | Latest | `npm install -g @CredShield-ntwrk/compact-compiler` |
+| Compact compiler | Latest | `npm install -g @midnight-ntwrk/compact-compiler` |
 | Lace Wallet | Latest | [lace.io](https://lace.io) browser extension |
 
 ### Option A — Local Network (Full Stack)

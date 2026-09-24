@@ -13,7 +13,7 @@
  * limitations under the License.
  */
 
-import type { ContractAddress, SigningKey } from '@CredShield-ntwrk/CredShield-js-protocol/compact-runtime';
+import type { ContractAddress, SigningKey } from '@midnight-ntwrk/compact-runtime';
 import {
   type ExportPrivateStatesOptions,
   type ExportSigningKeysOptions,
@@ -25,7 +25,7 @@ import {
   type PrivateStateId,
   type PrivateStateProvider,
   type SigningKeyExport,
-} from '@CredShield-ntwrk/CredShield-js-types';
+} from '@midnight-ntwrk/midnight-js-types';
 
 /**
  * A simple in-memory implementation of private state provider. Makes it easy to capture and rewrite private state from deploy.

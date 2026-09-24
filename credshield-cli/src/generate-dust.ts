@@ -15,11 +15,11 @@
 
 // import { webcrypto } from 'crypto';
 
-import { type WalletFacade } from '@CredShield-ntwrk/wallet-sdk-facade';
-import { createKeystore, UnshieldedWalletState } from '@CredShield-ntwrk/wallet-sdk-unshielded-wallet';
+import { type WalletFacade } from '@midnight-ntwrk/wallet-sdk-facade';
+import { createKeystore, UnshieldedWalletState } from '@midnight-ntwrk/wallet-sdk-unshielded-wallet';
 import { Logger } from 'pino';
-import { HDWallet, Roles } from '@CredShield-ntwrk/wallet-sdk-hd';
-import { getNetworkId } from '@CredShield-ntwrk/CredShield-js-network-id';
+import { HDWallet, Roles } from '@midnight-ntwrk/wallet-sdk-hd';
+import { getNetworkId } from '@midnight-ntwrk/midnight-js-network-id';
 import * as rx from 'rxjs';
 
 export const getUnshieldedSeed = (seed: string): Uint8Array<ArrayBufferLike> => {

@@ -1,11 +1,11 @@
-import { type CredShieldProviders } from "@CredShield-ntwrk/CredShield-js-types";
-import { type FoundContract } from "@CredShield-ntwrk/CredShield-js-contracts";
+import { type MidnightProviders } from "@midnight-ntwrk/midnight-js-types";
+import { type FoundContract } from "@midnight-ntwrk/midnight-js-contracts";
 import type {
   CredentialState,
   CredShieldPrivateState,
   Contract,
   Witnesses,
-} from "@CredShield-ntwrk/credshield-contract";
+} from "@midnight-ntwrk/credshield-contract";
 
 export const credShieldPrivateStateKey = "credShieldPrivateState";
 export type PrivateStateId = typeof credShieldPrivateStateKey;
@@ -24,7 +24,7 @@ export type CredShieldCircuitKeys = Exclude<
   number | symbol
 >;
 
-export type CredShieldProviders = CredShieldProviders<
+export type CredShieldProviders = MidnightProviders<
   CredShieldCircuitKeys,
   PrivateStateId,
   CredShieldPrivateState

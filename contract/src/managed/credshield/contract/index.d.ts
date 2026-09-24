@@ -1,4 +1,4 @@
-import type * as __compactRuntime from "@CredShield-ntwrk/compact-runtime";
+import type * as __compactRuntime from "@midnight-ntwrk/compact-runtime";
 
 export enum CredentialState {
   UNINITIALIZED = 0,

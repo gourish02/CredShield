@@ -3,8 +3,8 @@ import { LinearProgress, Alert, CircularProgress, TextField, Tooltip } from '@mu
 import { Shield, CheckCircle, Lock, EyeOff, Copy, Ban, Wallet } from 'lucide-react';
 import { type Observable } from 'rxjs';
 import { type CredShieldDeployment } from '../contexts';
-import { type CredShieldDerivedState } from '@CredShield-ntwrk/credshield-api';
-import { CredentialState } from '@CredShield-ntwrk/credshield-contract';
+import { type CredShieldDerivedState } from '@midnight-ntwrk/credshield-api';
+import { CredentialState } from '@midnight-ntwrk/credshield-contract';
 
 export type CredShieldCardProps = {
   deployment$?: Observable<CredShieldDeployment>;
