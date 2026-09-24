@@ -1,5 +1,5 @@
 import { type Ledger } from "./managed/credshield/contract/index.js";
-import { type WitnessContext } from "@CredShield-ntwrk/compact-runtime";
+import { type WitnessContext } from "@midnight-ntwrk/compact-runtime";
 
 export type CredShieldPrivateState = {
   readonly secretKey: Uint8Array;
