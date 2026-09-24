@@ -15,16 +15,13 @@
     }
   },
   "scripts": {
-    "build": "tsc --project tsconfig.build.json && cp -Rf ./src/managed ./dist/managed && cp ./src/credshield.compact ./dist",
-    "ci": "npm run typecheck && npm run test",
+    "build": "rm -rf dist && tsc --project tsconfig.build.json && cp -Rf ./src/managed ./dist/managed && cp ./src/credshield.compact ./dist",
+    "ci": "npm run compact && npm run typecheck && npm run lint && npm run build && npm run test",
     "compact": "compact compile src/credshield.compact ./src/managed/credshield",
     "lint": "eslint src",
     "prepack": "npm run build",
     "test": "vitest run --reporter=verbose",
     "typecheck": "tsc -p tsconfig.json --noEmit"
-  },
-  "dependencies": {
-    "@midnight-ntwrk/compact-runtime": "4.1.1"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.5",
@@ -35,6 +32,6 @@
     "eslint-plugin-prettier": "^5.5.6",
     "globals": "^17.6.0",
     "typescript": "^5.9.3",
-    "vitest": "^3.2.4"
+    "vitest": "^4.1.0"
   }
 }
