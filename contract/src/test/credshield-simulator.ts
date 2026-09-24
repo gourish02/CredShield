@@ -5,7 +5,7 @@ import {
   convertFieldToBytes,
   createConstructorContext,
   CostModel,
-} from "@CredShield-ntwrk/compact-runtime";
+} from "@midnight-ntwrk/compact-runtime";
 import {
   Contract,
   type Ledger,
