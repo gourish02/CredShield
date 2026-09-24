@@ -224,7 +224,7 @@ const initializeProviders = async (logger: Logger, connectedAPI: ConnectedAPI): 
         }
       },
     },
-    CredShieldProvider: {
+    midnightProvider: {
       submitTx: async (tx: FinalizedTransaction): Promise<TransactionId> => {
         await connectedAPI.submitTransaction(toHex(tx.serialize()));
         const txIdentifiers = tx.identifiers();

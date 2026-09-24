@@ -263,7 +263,7 @@ export const run = async (config: Config, testEnv: TestEnvironment, logger: Logg
       zkConfigProvider: zkConfigProvider,
       proofProvider: httpClientProofProvider(envConfiguration.proofServer, zkConfigProvider),
       walletProvider: walletProvider,
-      CredShieldProvider: walletProvider,
+      midnightProvider: walletProvider,
     };
     await mainLoop(providers, rli, logger);
   } catch (e) {
