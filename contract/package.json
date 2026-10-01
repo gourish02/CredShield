@@ -27,7 +27,7 @@
     "@midnight-ntwrk/compact-runtime": "0.16.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/eslintrc": "^3.3.7",
     "@eslint/js": "^9.39.4",
     "@typescript-eslint/eslint-plugin": "^8.61.0",
     "eslint": "^9.39.4",
